@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			table.table-fixed {table-layout: fixed; max-width: 45em;}
+			td.max {font-weight: bold;}
+			div.limited {max-width: 66em;}
+			div#preview_box {min-height: 600px;}
+		</style>
+   
+      <script>
+         function go(obj, loc) {
+            document.getElementById(obj).style.display = "block";
+            document.getElementById(obj).src = loc;
+         }
+         function show(obj, loc) {
+            document.getElementById(obj).style.display = "block";
+         }
+      </script>
+
+<style>
+.gallery2 {
+    position: relative;
+    width: auto;
+    height: 400px; }
+.gallery2 .index {
+    padding: 0;
+    margin: 0;
+    width: 10.5em;
+    list-style: none; }
+.gallery2 .index li {
+    margin: 0;
+    padding: 0;
+    float: left;}
+.gallery2 .index a { /* gallery2 item title */
+    display: block;
+    background-color: #EEEEEE;
+    border: 1px solid #FFFFFF;
+    text-decoration: none;
+    width: 1.9em;
+    padding: 6px; }
+.gallery2 .index a span { /* gallery2 item content */
+    display: block;
+    position: absolute;
+    left: -9999px; /* hidden */
+    top: 0em;
+    padding-left: 0em; }
+.gallery2 .index a span img{ /* gallery2 item content */
+    width: 75%;
+    }
+.gallery2 .index li:first-child a span {
+    top: 0em;
+    left: 10.5em;
+    z-index: 99; }
+.gallery2 .index a:hover {
+    border: 1px solid #888888; }
+.gallery2 .index a:hover span {
+    left: 10.5em;
+    z-index: 100; }
+</style>
+
+<style>
+   .gallery{position:relative;width:auto;height:400px}
+   .gallery .index{padding:0;margin:0;width:11em;list-style:none}
+   .gallery .index li{margin:0;padding:0} 
+   .gallery .index a{display:block;background-color:#eee;border:1px solid #fff;text-decoration:none;width:13em;padding:5px}
+   .gallery .index a span{display:block;position:absolute;left:-9999px;top:0;padding-left:2em}
+   .gallery .index li:first-child a span{left:12em;z-index:99}
+   .gallery .index a:hover{ border: 1px solid #888888;}
+   .gallery .index a:hover span{left:12em;z-index:100}
+   .gallery .index a span img{ width: 90%; }
+</style>
+
+		<title>To Bundle Adjust or Not</title>
+	</head>
+
+	<body>
+		<div class="container limited">
+			<div class="page-header">
+				<h2>To Bundle Adjust or Not: A Comparison of Relative Geolocation Correction Strategies for Satellite Multi-View Stereo</h2>
+
+			   <ul class="list-inline">
+				<li>Roger Marí</li>
+			   	<li>Carlo de Franchis</li>
+			   	<li>Enric Meinhardt-Llopis</li>
+			   	<li>Gabriele Facciolo</li>
+			   </ul>
+			</div>
+         <center>
+            <!-- <img style="width:10%" src="img/snap_site0.jpg" class="img-responsive" alt="Example results from the paper">-->
+         <img style="height:200px" src="img/snap_site0.jpg" alt="Example results from the paper">
+         <img style="height:200px" src="img/snap_site1.jpg" alt="Example results from the paper">
+         <img style="height:200px" src="img/snap_site2.jpg" alt="Example results from the paper">
+         <img style="height:200px" src="img/snap_site3.jpg" alt="Example results from the paper">
+         </center>
+			<h4>Abstract</h4>
+			<p class="text-justify">
+				The generation of up-to-date accurate 3D models from multi-view satellite 
+				images has recently become a hot research topic. A well-known challenge of 
+				this problem is to put all cameras into a common frame of reference, since 
+				depending on the satellite geopositioning equipment the camera parameters 
+				may contain errors of up to tens of meters on the ground.
+			</p>
+			<p class="text-justify">
+                                This work aims to investigate different relative geolocation correction 
+                                techniques for 3D satellite imagery. To this end, we experiment with 3 
+                                multi-view stereo pipelines for 3D reconstruction from multi-date satellite 
+                                images. Two of the reviewed pipelines use a bundle adjustment procedure each 
+                                optimizing a different set of parameters to correct the RPCs: 2D translations 
+                                in the image domain or the 3D rotation of the satellite cameras. Oppositely, 
+                                the third approach omits any kind of prior bundle adjustment and aligns 
+                                independent models based on geometry correlation. To perform a fair comparison, 
+                                the different blocks of the MVS pipelines are all common apart from the relative
+                                geolocation correction method that is applied in each case.
+			  </p>
+			   <ul class="list-inline">
+               <li><a href="doc/iccvw2019.pdf">[article]</a></li>
+               <li><a href="doc/poster.pdf">[poster]</a></li>
+
+         <h3>Data</h3>
+
+	 <p> 
+         We employ the <a href="https://www.researchgate.net/profile/Marc_Bosch/publication/319172444_A_multiple_view_stereo_benchmark_for_satellite_imagery/links/59de99c6a6fdcca0d3204f2b/A-multiple-view-stereo-benchmark-for-satellite-imagery.pdf">IARPA Multi-View Stereo 3D Mapping Challenge</a> dataset which includes 47 DigitalGlobe WorldView-3 images, with 30 cm nadir resolution, collected between 2014 and 2016 over Buenos Aires; and the dataset comprised in the <a href="https://arxiv.org/pdf/1811.08739.pdf">2019 IEEE GRSS Data Fusion Contest</a> with 26 DigitalGlobe WorldView-3 images collected between 2014 and 2016 over Jacksonville.
+         </p>
+
+	<body>
+</html>
+
