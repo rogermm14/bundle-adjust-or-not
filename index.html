@@ -91,40 +91,187 @@
 			</div>
          <center>
             <!-- <img style="width:10%" src="img/snap_site0.jpg" class="img-responsive" alt="Example results from the paper">-->
-         <img style="height:200px" src="img/iarpa_dsm.png" alt="Example results from the paper">
-         <img style="height:200px" src="img/jax113_dsm.png" alt="Example results from the paper">
-         <img style="height:200px" src="img/jax161_dsm.png" alt="Example results from the paper">
-         <img style="height:200px" src="img/jax251_dsm.png" alt="Example results from the paper">
+         <img style="width:220px" src="img/iarpa_dsm.png" alt="Example results from the paper">
+         <img style="width:220px" src="img/jax113_dsm.png" alt="Example results from the paper">
+         <img style="width:220px" src="img/jax161_dsm.png" alt="Example results from the paper">
+         <img style="width:220px" src="img/jax251_dsm.png" alt="Example results from the paper">
          </center>
-			<h4>Abstract</h4>
-			<p class="text-justify">
-				The generation of up-to-date accurate 3D models from multi-view satellite 
-				images has recently become a hot research topic. A well-known challenge of 
-				this problem is to put all cameras into a common frame of reference, since 
-				depending on the satellite geopositioning equipment the camera parameters 
-				may contain errors of up to tens of meters on the ground.
-			</p>
-			<p class="text-justify">
-                                This work aims to investigate different relative geolocation correction 
-                                techniques for 3D satellite imagery. To this end, we experiment with 3 
-                                multi-view stereo pipelines for 3D reconstruction from multi-date satellite 
-                                images. Two of the reviewed pipelines use a bundle adjustment procedure each 
-                                optimizing a different set of parameters to correct the RPCs: 2D translations 
-                                in the image domain or the 3D rotation of the satellite cameras. Oppositely, 
-                                the third approach omits any kind of prior bundle adjustment and aligns 
-                                independent models based on geometry correlation. To perform a fair comparison, 
-                                the different blocks of the MVS pipelines are all common apart from the relative
-                                geolocation correction method that is applied in each case.
-			  </p>
-			   <ul class="list-inline">
-               <li><a href="doc/iccvw2019.pdf">[article]</a></li>
-               <li><a href="doc/poster.pdf">[poster]</a></li>
-
-         <h3>Data</h3>
-
-	 <p> 
-         We employ the <a href="https://www.researchgate.net/profile/Marc_Bosch/publication/319172444_A_multiple_view_stereo_benchmark_for_satellite_imagery/links/59de99c6a6fdcca0d3204f2b/A-multiple-view-stereo-benchmark-for-satellite-imagery.pdf">IARPA Multi-View Stereo 3D Mapping Challenge</a> dataset which includes 47 DigitalGlobe WorldView-3 images, with 30 cm nadir resolution, collected between 2014 and 2016 over Buenos Aires; and the dataset comprised in the <a href="https://arxiv.org/pdf/1811.08739.pdf">2019 IEEE GRSS Data Fusion Contest</a> with 26 DigitalGlobe WorldView-3 images collected between 2014 and 2016 over Jacksonville.
+         <br />
+	 <h4>Abstract</h4>
+	 <p class="text-justify">
+		The generation of up-to-date accurate 3D models from multi-view satellite 
+		images has recently become a hot research topic. A well-known challenge of 
+		this problem is to put all cameras into a common frame of reference, since 
+		depending on the satellite geopositioning equipment the camera parameters 
+		may contain errors of up to tens of meters on the ground. This work aims 
+                to investigate different relative geolocation correction techniques and 
+                their impact on 3D reconstruction from satellite imagery. We experiment with 3 
+                multi-view stereo pipelines for 3D reconstruction from multi-date satellite 
+                images. Two of the reviewed pipelines use a bundle adjustment procedure, each 
+                optimizing a different set of parameters to correct the RPCs: 2D translations 
+                in the image domain (<a href="https://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W06/papers/Ozcanli_Automatic_Geo-location_Correction_2014_CVPR_paper.pdf">bundle block adjustment</a>) or the 3D 
+                rotation of the satellite cameras. Oppositely, the third approach omits any kind 
+                of prior bundle adjustment and is based on the <a href="http://openaccess.thecvf.com/content_cvpr_2017_workshops/w18/papers/Facciolo_Automatic_3D_Reconstruction_CVPR_2017_paper.pdf">alignment of 
+                independent models based on geometry correlation</a>. To perform a fair comparison, 
+                the different blocks of the MVS pipelines are all common apart from the relative 
+                geolocation correction method that is applied in each case.
+	 </p>
+	 <ul class="list-inline">
+	 <li><a href="doc/iccvw2019.pdf">[article]</a></li>
+	 <li><a href="doc/poster.pdf">[poster]</a></li>
+	 </ul>
+	 <br />
+         <h4>Data</h4>
+	 <p class="text-justify"> 
+         We employ the <a href="https://www.researchgate.net/profile/Marc_Bosch/publication/319172444_A_multiple_view_stereo_benchmark_for_satellite_imagery/links/59de99c6a6fdcca0d3204f2b/A-multiple-view-stereo-benchmark-for-satellite-imagery.pdf">IARPA Multi-View Stereo 3D Mapping Challenge</a> dataset which includes 47 DigitalGlobe WorldView-3 images, with 30 cm nadir resolution, collected between 2014 and 2016 over Buenos Aires; and the dataset comprised in the <a href="https://arxiv.org/pdf/1811.08739.pdf">2019 IEEE GRSS Data Fusion Contest</a> with 26 DigitalGlobe WorldView-3 images collected between 2014 and 2016 over Jacksonville. The input crops for each area of interest (AOI) are shown below.
          </p>
+	 <br />
+	 <h4>AOI 1</h4>
+	 <div class="gallery2" style="height:450px">
+	 <ul class="index">
+		<li><a href="#">00<span><img style="width:280px" src="img/aoi1/00.png" /></span></a></li>
+		<li><a href="#">01<span><img style="width:380px" src="img/aoi1/01.png" /></span></a></li>
+		<li><a href="#">02<span><img style="width:380px" src="img/aoi1/02.png" /></span></a></li>
+		<li><a href="#">03<span><img style="width:380px" src="img/aoi1/03.png" /></span></a></li>
+		<li><a href="#">04<span><img style="width:380px" src="img/aoi1/04.png" /></span></a></li>
+		<li><a href="#">05<span><img style="width:380px" src="img/aoi1/05.png" /></span></a></li>
+		<li><a href="#">06<span><img style="width:380px" src="img/aoi1/06.png" /></span></a></li>
+		<li><a href="#">07<span><img style="width:380px" src="img/aoi1/07.png" /></span></a></li>
+		<li><a href="#">08<span><img style="width:380px" src="img/aoi1/08.png" /></span></a></li>
+		<li><a href="#">09<span><img style="width:380px" src="img/aoi1/09.png" /></span></a></li>
+		<li><a href="#">10<span><img style="width:380px" src="img/aoi1/10.png" /></span></a></li>
+		<li><a href="#">11<span><img style="width:380px" src="img/aoi1/11.png" /></span></a></li>
+		<li><a href="#">12<span><img style="width:380px" src="img/aoi1/12.png" /></span></a></li>
+		<li><a href="#">13<span><img style="width:380px" src="img/aoi1/13.png" /></span></a></li>
+		<li><a href="#">14<span><img style="width:380px" src="img/aoi1/14.png" /></span></a></li>
+		<li><a href="#">15<span><img style="width:380px" src="img/aoi1/15.png" /></span></a></li>
+		<li><a href="#">16<span><img style="width:380px" src="img/aoi1/16.png" /></span></a></li>
+		<li><a href="#">17<span><img style="width:380px" src="img/aoi1/17.png" /></span></a></li>
+		<li><a href="#">18<span><img style="width:380px" src="img/aoi1/18.png" /></span></a></li>
+		<li><a href="#">19<span><img style="width:380px" src="img/aoi1/19.png" /></span></a></li>
+		<li><a href="#">20<span><img style="width:380px" src="img/aoi1/20.png" /></span></a></li>
+		<li><a href="#">21<span><img style="width:380px" src="img/aoi1/21.png" /></span></a></li>
+		<li><a href="#">22<span><img style="width:380px" src="img/aoi1/22.png" /></span></a></li>
+		<li><a href="#">23<span><img style="width:380px" src="img/aoi1/23.png" /></span></a></li>
+		<li><a href="#">24<span><img style="width:380px" src="img/aoi1/24.png" /></span></a></li>
+		<li><a href="#">25<span><img style="width:380px" src="img/aoi1/25.png" /></span></a></li>
+		<li><a href="#">26<span><img style="width:380px" src="img/aoi1/26.png" /></span></a></li>
+		<li><a href="#">27<span><img style="width:380px" src="img/aoi1/27.png" /></span></a></li>
+		<li><a href="#">28<span><img style="width:380px" src="img/aoi1/28.png" /></span></a></li>
+		<li><a href="#">29<span><img style="width:380px" src="img/aoi1/29.png" /></span></a></li>
+		<li><a href="#">30<span><img style="width:380px" src="img/aoi1/30.png" /></span></a></li>
+		<li><a href="#">31<span><img style="width:380px" src="img/aoi1/31.png" /></span></a></li>
+		<li><a href="#">32<span><img style="width:380px" src="img/aoi1/32.png" /></span></a></li>
+		<li><a href="#">33<span><img style="width:380px" src="img/aoi1/33.png" /></span></a></li>
+		<li><a href="#">34<span><img style="width:380px" src="img/aoi1/34.png" /></span></a></li>
+		<li><a href="#">35<span><img style="width:380px" src="img/aoi1/35.png" /></span></a></li>
+		<li><a href="#">36<span><img style="width:380px" src="img/aoi1/36.png" /></span></a></li>
+		<li><a href="#">37<span><img style="width:380px" src="img/aoi1/37.png" /></span></a></li>
+		<li><a href="#">38<span><img style="width:380px" src="img/aoi1/38.png" /></span></a></li>
+		<li><a href="#">39<span><img style="width:380px" src="img/aoi1/39.png" /></span></a></li>
+		<li><a href="#">40<span><img style="width:380px" src="img/aoi1/40.png" /></span></a></li>
+		<li><a href="#">42<span><img style="width:380px" src="img/aoi1/41.png" /></span></a></li>
+		<li><a href="#">43<span><img style="width:380px" src="img/aoi1/42.png" /></span></a></li>
+		<li><a href="#">44<span><img style="width:380px" src="img/aoi1/43.png" /></span></a></li>
+		<li><a href="#">45<span><img style="width:380px" src="img/aoi1/44.png" /></span></a></li>
+		<li><a href="#">46<span><img style="width:380px" src="img/aoi1/45.png" /></span></a></li>
+		<li><a href="#">47<span><img style="width:380px" src="img/aoi1/46.png" /></span></a></li>
+	 </ul>
+	 </div>
+	 <h4>AOI 2</h4>
+	 <div class="gallery2" style="height:450px">
+	 <ul class="index">
+		<li><a href="#">00<span><img style="width:280px" src="img/aoi2/00.png" /></span></a></li>
+		<li><a href="#">01<span><img style="width:380px" src="img/aoi2/01.png" /></span></a></li>
+		<li><a href="#">02<span><img style="width:380px" src="img/aoi2/02.png" /></span></a></li>
+		<li><a href="#">03<span><img style="width:380px" src="img/aoi2/03.png" /></span></a></li>
+		<li><a href="#">04<span><img style="width:350px" src="img/aoi2/04.png" /></span></a></li>
+		<li><a href="#">05<span><img style="width:350px" src="img/aoi2/05.png" /></span></a></li>
+		<li><a href="#">06<span><img style="width:350px" src="img/aoi2/06.png" /></span></a></li>
+		<li><a href="#">07<span><img style="width:350px" src="img/aoi2/07.png" /></span></a></li>
+		<li><a href="#">08<span><img style="width:350px" src="img/aoi2/08.png" /></span></a></li>
+		<li><a href="#">09<span><img style="width:350px" src="img/aoi2/09.png" /></span></a></li>
+		<li><a href="#">10<span><img style="width:350px" src="img/aoi2/10.png" /></span></a></li>
+		<li><a href="#">11<span><img style="width:350px" src="img/aoi2/11.png" /></span></a></li>
+		<li><a href="#">12<span><img style="width:350px" src="img/aoi2/12.png" /></span></a></li>
+		<li><a href="#">13<span><img style="width:350px" src="img/aoi2/13.png" /></span></a></li>
+		<li><a href="#">14<span><img style="width:350px" src="img/aoi2/14.png" /></span></a></li>
+		<li><a href="#">15<span><img style="width:350px" src="img/aoi2/15.png" /></span></a></li>
+		<li><a href="#">16<span><img style="width:350px" src="img/aoi2/16.png" /></span></a></li>
+		<li><a href="#">17<span><img style="width:350px" src="img/aoi2/17.png" /></span></a></li>
+		<li><a href="#">18<span><img style="width:350px" src="img/aoi2/18.png" /></span></a></li>
+		<li><a href="#">19<span><img style="width:350px" src="img/aoi2/19.png" /></span></a></li>
+		<li><a href="#">20<span><img style="width:350px" src="img/aoi2/20.png" /></span></a></li>
+		<li><a href="#">21<span><img style="width:350px" src="img/aoi2/21.png" /></span></a></li>
+		<li><a href="#">22<span><img style="width:350px" src="img/aoi2/22.png" /></span></a></li>
+		<li><a href="#">23<span><img style="width:350px" src="img/aoi2/23.png" /></span></a></li>
+		<li><a href="#">24<span><img style="width:350px" src="img/aoi2/24.png" /></span></a></li>
+		<li><a href="#">25<span><img style="width:350px" src="img/aoi2/25.png" /></span></a></li>
+	 </ul>
+	 </div>
+	 <h4>AOI 3</h4>
+	 <div class="gallery2" style="height:450px">
+	 <ul class="index">
+		<li><a href="#">00<span><img style="width:280px" src="img/aoi3/00.png" /></span></a></li>
+		<li><a href="#">01<span><img style="width:380px" src="img/aoi3/01.png" /></span></a></li>
+		<li><a href="#">02<span><img style="width:380px" src="img/aoi3/02.png" /></span></a></li>
+		<li><a href="#">03<span><img style="width:380px" src="img/aoi3/03.png" /></span></a></li>
+		<li><a href="#">04<span><img style="width:350px" src="img/aoi3/04.png" /></span></a></li>
+		<li><a href="#">05<span><img style="width:350px" src="img/aoi3/05.png" /></span></a></li>
+		<li><a href="#">06<span><img style="width:350px" src="img/aoi3/06.png" /></span></a></li>
+		<li><a href="#">07<span><img style="width:350px" src="img/aoi3/07.png" /></span></a></li>
+		<li><a href="#">08<span><img style="width:350px" src="img/aoi3/08.png" /></span></a></li>
+		<li><a href="#">09<span><img style="width:350px" src="img/aoi3/09.png" /></span></a></li>
+		<li><a href="#">10<span><img style="width:350px" src="img/aoi3/10.png" /></span></a></li>
+		<li><a href="#">11<span><img style="width:350px" src="img/aoi3/11.png" /></span></a></li>
+		<li><a href="#">12<span><img style="width:350px" src="img/aoi3/12.png" /></span></a></li>
+		<li><a href="#">13<span><img style="width:350px" src="img/aoi3/13.png" /></span></a></li>
+		<li><a href="#">14<span><img style="width:350px" src="img/aoi3/14.png" /></span></a></li>
+		<li><a href="#">15<span><img style="width:350px" src="img/aoi3/15.png" /></span></a></li>
+		<li><a href="#">16<span><img style="width:350px" src="img/aoi3/16.png" /></span></a></li>
+		<li><a href="#">17<span><img style="width:350px" src="img/aoi3/17.png" /></span></a></li>
+		<li><a href="#">18<span><img style="width:350px" src="img/aoi3/18.png" /></span></a></li>
+		<li><a href="#">19<span><img style="width:350px" src="img/aoi3/19.png" /></span></a></li>
+		<li><a href="#">20<span><img style="width:350px" src="img/aoi3/20.png" /></span></a></li>
+		<li><a href="#">21<span><img style="width:350px" src="img/aoi3/21.png" /></span></a></li>
+		<li><a href="#">22<span><img style="width:350px" src="img/aoi3/22.png" /></span></a></li>
+		<li><a href="#">23<span><img style="width:350px" src="img/aoi3/23.png" /></span></a></li>
+		<li><a href="#">24<span><img style="width:350px" src="img/aoi3/24.png" /></span></a></li>
+		<li><a href="#">25<span><img style="width:350px" src="img/aoi3/25.png" /></span></a></li>
+	 </ul>
+	 </div>
+	 <h4>AOI 4</h4>
+	 <div class="gallery2" style="height:450px">
+	 <ul class="index">
+		<li><a href="#">00<span><img style="width:280px" src="img/aoi4/00.png" /></span></a></li>
+		<li><a href="#">01<span><img style="width:380px" src="img/aoi4/01.png" /></span></a></li>
+		<li><a href="#">02<span><img style="width:380px" src="img/aoi4/02.png" /></span></a></li>
+		<li><a href="#">03<span><img style="width:380px" src="img/aoi4/03.png" /></span></a></li>
+		<li><a href="#">04<span><img style="width:350px" src="img/aoi4/04.png" /></span></a></li>
+		<li><a href="#">05<span><img style="width:350px" src="img/aoi4/05.png" /></span></a></li>
+		<li><a href="#">06<span><img style="width:350px" src="img/aoi4/06.png" /></span></a></li>
+		<li><a href="#">07<span><img style="width:350px" src="img/aoi4/07.png" /></span></a></li>
+		<li><a href="#">08<span><img style="width:350px" src="img/aoi4/08.png" /></span></a></li>
+		<li><a href="#">09<span><img style="width:350px" src="img/aoi4/09.png" /></span></a></li>
+		<li><a href="#">10<span><img style="width:350px" src="img/aoi4/10.png" /></span></a></li>
+		<li><a href="#">11<span><img style="width:350px" src="img/aoi4/11.png" /></span></a></li>
+		<li><a href="#">12<span><img style="width:350px" src="img/aoi4/12.png" /></span></a></li>
+		<li><a href="#">13<span><img style="width:350px" src="img/aoi4/13.png" /></span></a></li>
+		<li><a href="#">14<span><img style="width:350px" src="img/aoi4/14.png" /></span></a></li>
+		<li><a href="#">15<span><img style="width:350px" src="img/aoi4/15.png" /></span></a></li>
+		<li><a href="#">16<span><img style="width:350px" src="img/aoi4/16.png" /></span></a></li>
+		<li><a href="#">17<span><img style="width:350px" src="img/aoi4/17.png" /></span></a></li>
+		<li><a href="#">18<span><img style="width:350px" src="img/aoi4/18.png" /></span></a></li>
+		<li><a href="#">19<span><img style="width:350px" src="img/aoi4/19.png" /></span></a></li>
+		<li><a href="#">20<span><img style="width:350px" src="img/aoi4/20.png" /></span></a></li>
+		<li><a href="#">21<span><img style="width:350px" src="img/aoi4/21.png" /></span></a></li>
+		<li><a href="#">22<span><img style="width:350px" src="img/aoi4/22.png" /></span></a></li>
+		<li><a href="#">23<span><img style="width:350px" src="img/aoi4/23.png" /></span></a></li>
+		<li><a href="#">24<span><img style="width:350px" src="img/aoi4/24.png" /></span></a></li>
+		<li><a href="#">25<span><img style="width:350px" src="img/aoi4/25.png" /></span></a></li>
+	 </ul>
+	 </div>
+	 <br />
 
 	<body>
 </html>
